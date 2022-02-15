@@ -105,7 +105,6 @@ def version_check(version):
         html = response.text
         soup = BeautifulSoup(html, 'html.parser')
 
-        # 최근 20판 전적 = div.GameItemList
         last_version = soup.select_one('#readme > div.Box-body.px-5.pb-5 > article > p:nth-child(5)')
 
         if last_version.text == version:
